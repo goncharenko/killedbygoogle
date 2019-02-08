@@ -77,10 +77,7 @@ export default class App extends Component {
       <div>
         <Header />
         <GreatQuotes />
-        {/* <Search search={this.searchFilter} term={term} /> */}
-        {/* <Filter current={activeFilter} filterHandler={this.setFilter} items={fullList} /> */}
         <List items={listOfItems} />
-        <Footer />
       </div>
     );
   }
