@@ -75,11 +75,6 @@ export default class App extends Component {
     } = this.state;
     return (
       <div>
-        <BannerMessage>
-          <a href="https://github.com/codyogden/killedbygoogle/issues">
-            {"Missing an Obituary? We're Open Source."}
-          </a>
-        </BannerMessage>
         <Header />
         <GreatQuotes />
         {/* <Search search={this.searchFilter} term={term} /> */}
