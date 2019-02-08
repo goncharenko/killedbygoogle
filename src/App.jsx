@@ -12,6 +12,7 @@ import List from './components/List';
 import Search from './components/Search';
 import Filter from './components/Filter';
 import Footer from './components/Footer';
+import GreatQuotes from './components/GreatQuotes';
 
 export default class App extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class App extends Component {
       listOfItems: data,
       fullList: data,
       activeFilter: false,
-      term: ''
+      term: '',
     };
 
     // Bindings
@@ -32,18 +33,18 @@ export default class App extends Component {
   setFilter(val) {
     this.setState(
       {
-        activeFilter: val
+        activeFilter: val,
       },
-      this.search
+      this.search,
     );
   }
 
   searchFilter(term) {
     this.setState(
       {
-        term
+        term,
       },
-      this.search
+      this.search,
     );
   }
 
@@ -51,29 +52,27 @@ export default class App extends Component {
     const { fullList, activeFilter, term } = this.state;
     const regexp = new RegExp(term.toLowerCase(), 'i');
     // If a filter is active, only search through those results
-    const list = activeFilter
-      ? fullList.filter(el => el.type === activeFilter)
-      : fullList;
+    const list = activeFilter ? fullList.filter(el => el.type === activeFilter) : fullList;
     // If search goes empty
     if (term === '') {
       // Reset the list.
       this.setState({
-        listOfItems: list
+        listOfItems: list,
       });
     } else {
       // Otherwise filter the list by name and description
       this.setState({
         listOfItems: list.filter(
-          el =>
-            regexp.test(el.name.toLowerCase()) ||
-            regexp.test(el.description.toLowerCase())
-        )
+          el => regexp.test(el.name.toLowerCase()) || regexp.test(el.description.toLowerCase()),
+        ),
       });
     }
   }
 
   render() {
-    const { listOfItems, activeFilter, term, fullList } = this.state;
+    const {
+      listOfItems, activeFilter, term, fullList,
+    } = this.state;
     return (
       <div>
         <BannerMessage>
@@ -82,6 +81,7 @@ export default class App extends Component {
           </a>
         </BannerMessage>
         <Header />
+        <GreatQuotes />
         {/* <Search search={this.searchFilter} term={term} /> */}
         {/* <Filter current={activeFilter} filterHandler={this.setFilter} items={fullList} /> */}
         <List items={listOfItems} />
@@ -92,17 +92,15 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.any).isRequired
+  data: PropTypes.arrayOf(PropTypes.any).isRequired,
 };
 
 // Retrieve static json
-fetch('graveyard.json').then(response => {
+fetch('graveyard.json').then((response) => {
   // Process it
-  response.json().then(data => {
+  response.json().then((data) => {
     // Sort by the dateClose (date discontinued)
-    const graveyard = data.sort(
-      (a, b) => new Date(b.dateClose) - new Date(a.dateClose)
-    );
+    const graveyard = data.sort((a, b) => new Date(b.dateClose) - new Date(a.dateClose));
     // Render the app
     render(<App data={graveyard} />, document.querySelector('#killedbygoogle'));
   });

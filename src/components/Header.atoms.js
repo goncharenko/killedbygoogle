@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const LogoSize = 50;
-export const Logo = styled.img`
+export const Logo = styled.img `
   display: block;
   width: ${LogoSize}px;
   height: ${LogoSize}px;
@@ -12,7 +12,7 @@ export const Logo = styled.img`
   }
 `;
 
-export const Masthead = styled.header`
+export const Masthead = styled.header `
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,12 +21,22 @@ export const Masthead = styled.header`
   box-sizing: border-box;
 `;
 
-export const Title = styled.h1`
+export const Title = styled.h1 `
   font-weight: lighter;
   text-align: center;
   margin: 0;
   font-size: 2em;
   @media screen and ( max-width: 600px ) {
     font-size: 1.75em;
+  }
+`;
+
+export const Quote = styled.h2 `
+  font-weight: lighter;
+  text-align: center;
+  margin: 0;
+  font-size: 1.5em;
+  @media screen and ( max-width: 600px ) {
+    font-size: 1.5em;
   }
 `;
