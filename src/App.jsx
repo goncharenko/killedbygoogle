@@ -82,7 +82,7 @@ export default class App extends Component {
           </a>
         </BannerMessage>
         <Header />
-        <Search search={this.searchFilter} term={term} />
+        {/* <Search search={this.searchFilter} term={term} /> */}
         {/* <Filter current={activeFilter} filterHandler={this.setFilter} items={fullList} /> */}
         <List items={listOfItems} />
         <Footer />
