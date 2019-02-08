@@ -1,8 +1,17 @@
 [{
-  "dateClose": "2018-09-01",
-  "dateOpen": "2015-01-01",
-  "description": "monitoring solution for Microsoft Dynamics CRM",
-  "link": "https://technosoft.com.sg/japan/xmetry",
-  "name": "XMetry",
-  "type": "service"
-}]
+    "dateClose": "2018-09-01",
+    "dateOpen": "2015-01-01",
+    "description": "monitoring solution for Microsoft Dynamics CRM",
+    "link": "https://technosoft.com.sg/japan/xmetry",
+    "name": "XMetry",
+    "type": "service"
+  },
+  {
+    "dateClose": "2017-01-01",
+    "dateOpen": "2015-06-10",
+    "description": "component for Microsoft Dynamics CRM",
+    "link": "",
+    "name": "Editable Grid",
+    "type": "service"
+  }
+]
