@@ -75,9 +75,13 @@ export default class App extends Component {
     } = this.state;
     return (
       <div>
+        <BannerMessage>
+          <a href="https://technosoft.com.sg">&nbsp;</a>
+        </BannerMessage>
         <Header />
         <GreatQuotes />
         <List items={listOfItems} />
+        <Footer />
       </div>
     );
   }
