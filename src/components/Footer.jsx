@@ -5,6 +5,6 @@ import { FooterContainer } from './Footer.atoms';
 
 export default () => (
   <FooterContainer>
-    <div>Technosoft</div>
+    <div>© 2019 anonymous</div>
   </FooterContainer>
 );

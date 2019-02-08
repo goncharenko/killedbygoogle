@@ -76,7 +76,7 @@ export default class App extends Component {
     return (
       <div>
         <BannerMessage>
-          <a href="https://technosoft.com.sg">&nbsp;</a>
+          <a href="">&#x2601;</a>
         </BannerMessage>
         <Header />
         <GreatQuotes />
