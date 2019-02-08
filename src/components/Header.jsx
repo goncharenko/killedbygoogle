@@ -6,8 +6,6 @@ import { Logo, Masthead, Title } from './Header.atoms';
 export default () => (
   <Masthead>
     <Logo src="assets/tombstone.svg" alt="Tombstone" />
-    <Title>
-      {'Killed by Google'}
-    </Title>
+    <Title>{'Killed by Technosoft'}</Title>
   </Masthead>
 );
