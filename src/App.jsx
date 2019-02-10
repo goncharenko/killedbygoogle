@@ -75,11 +75,11 @@ export default class App extends Component {
     } = this.state;
     return (
       <div>
-        <BannerMessage>
-          <a href="">&#x2601;</a>
-        </BannerMessage>
+        <BannerMessage>&nbsp;</BannerMessage>
         <Header />
+        <br />
         <GreatQuotes />
+        <br />
         <List items={listOfItems} />
         <Footer />
       </div>

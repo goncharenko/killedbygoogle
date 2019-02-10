@@ -1,9 +1,49 @@
 [{
     "dateClose": "2018-09-01",
     "dateOpen": "2015-01-01",
-    "description": "monitoring solution for Microsoft Dynamics CRM.",
+    "description": "telemetric solution for Microsoft Dynamics CRM. XMetry aggregates real-time user exceptions, actions, clicks and events to empower real-time insights and faster problem resolution.",
     "link": "https://technosoft.com.sg/japan/xmetry",
     "name": "XMetry",
+    "type": "service"
+  },
+  {
+    "dateClose": "2017-12-01",
+    "dateOpen": "2016-07-01",
+    "description": "solutions for automotive dealers.",
+    "link": "",
+    "name": "Otoleap Marketplace",
+    "type": "service"
+  },
+  {
+    "dateClose": "2017-01-01",
+    "dateOpen": "2016-01-01",
+    "description": "",
+    "link": "",
+    "name": "Circle check",
+    "type": "service"
+  },
+  {
+    "dateClose": "2018-02-01",
+    "dateOpen": "2017-06-10",
+    "description": "",
+    "link": "",
+    "name": "Automotive Dealer",
+    "type": "service"
+  },
+  {
+    "dateClose": "2017-01-01",
+    "dateOpen": "2015-06-10",
+    "description": "",
+    "link": "",
+    "name": "Multi Instance",
+    "type": "service"
+  },
+  {
+    "dateClose": "2017-01-01",
+    "dateOpen": "2015-06-10",
+    "description": "component for Microsoft Dynamics CRM.",
+    "link": "",
+    "name": "Customer 360",
     "type": "service"
   },
   {
@@ -12,6 +52,14 @@
     "description": "component for Microsoft Dynamics CRM.",
     "link": "",
     "name": "Editable Grid",
+    "type": "service"
+  },
+  {
+    "dateClose": "2017-01-01",
+    "dateOpen": "2015-06-10",
+    "description": "component for Microsoft Dynamics CRM.",
+    "link": "",
+    "name": "Image Control",
     "type": "service"
   }
 ]

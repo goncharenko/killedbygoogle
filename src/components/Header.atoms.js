@@ -34,9 +34,24 @@ export const Title = styled.h1 `
 export const Quote = styled.h2 `
   font-weight: lighter;
   text-align: center;
+`;
+
+export const Head = styled.i `
+  height: 0px;
+  padding-right: 20px;
+`;
+
+export const Balloon = styled.div `
+  background-color: #f7d51d;
+`
+
+export const SubTitle = styled.p `
+  font-weight: lighter;
+  text-align: center;
   margin: 0;
-  font-size: 1.5em;
+  font-size: 1.25em;
   @media screen and ( max-width: 600px ) {
-    font-size: 1.5em;
+    font-size: 1.25em;
   }
+  color: blue;
 `;

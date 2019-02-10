@@ -29,14 +29,18 @@ const eolIdiom = () => {
 
 export default class Item extends Component {
   getIcon() {
-    return (this.isPast()) ? <Icon src="assets/tombstone.svg" alt="Tombstone" /> : <Icon src="assets/guillotine.svg" alt="Guillotine" />;
+    return this.isPast() ? (
+      <Icon src="assets/tombstone3.png" alt="Tombstone" />
+    ) : (
+      <Icon src="assets/guillotine.svg" alt="Guillotine" />
+    );
   }
 
   getYears() {
     const { dateClose, dateOpen } = this.props;
     const duration = formatDistance(dateClose, dateOpen);
 
-    return (` It was ${duration} old.`);
+    return ` It was ${duration} old.`;
   }
 
   isPast() {
@@ -52,23 +56,11 @@ export default class Item extends Component {
 
     if (!this.isPast()) {
       if (new Date(dateClose) < yearFromNow) {
-        return (
-          <span>
-            {`${eolIdiom()} in ${relativeDate}, `}
-          </span>
-        );
+        return <span>{`${eolIdiom()} in ${relativeDate}, `}</span>;
       }
-      return (
-        <span>
-          {`${eolIdiom()} in ${exactDate}, `}
-        </span>
-      );
+      return <span>{`${eolIdiom()} in ${exactDate}, `}</span>;
     }
-    return (
-      <span>
-        {`Killed ${relativeDate} ago, `}
-      </span>
-    );
+    return <span>{`Killed ${relativeDate} ago, `}</span>;
   }
 
   ageRange(grave) {
@@ -100,7 +92,11 @@ export default class Item extends Component {
           {this.ageRange(grave)}
         </IconContainer>
         <ContentContainer>
-          <h2><a href={grave.link} target="_blank" rel="noopener noreferrer">{grave.name}</a></h2>
+          <h2>
+            <a href={grave.link} target="_blank" rel="noopener noreferrer">
+              {grave.name}
+            </a>
+          </h2>
           <Description>
             {this.timePhrase()}
             {grave.description}
