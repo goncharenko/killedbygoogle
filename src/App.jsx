@@ -9,8 +9,6 @@ import './global.scss';
 import BannerMessage from './components/BannerMessage';
 import Header from './components/Header';
 import List from './components/List';
-import Search from './components/Search';
-import Filter from './components/Filter';
 import Footer from './components/Footer';
 import GreatQuotes from './components/GreatQuotes';
 
@@ -20,59 +18,11 @@ export default class App extends Component {
     const { data } = props;
     this.state = {
       listOfItems: data,
-      fullList: data,
-      activeFilter: false,
-      term: '',
     };
-
-    // Bindings
-    this.searchFilter = this.searchFilter.bind(this);
-    this.setFilter = this.setFilter.bind(this);
-  }
-
-  setFilter(val) {
-    this.setState(
-      {
-        activeFilter: val,
-      },
-      this.search,
-    );
-  }
-
-  searchFilter(term) {
-    this.setState(
-      {
-        term,
-      },
-      this.search,
-    );
-  }
-
-  search() {
-    const { fullList, activeFilter, term } = this.state;
-    const regexp = new RegExp(term.toLowerCase(), 'i');
-    // If a filter is active, only search through those results
-    const list = activeFilter ? fullList.filter(el => el.type === activeFilter) : fullList;
-    // If search goes empty
-    if (term === '') {
-      // Reset the list.
-      this.setState({
-        listOfItems: list,
-      });
-    } else {
-      // Otherwise filter the list by name and description
-      this.setState({
-        listOfItems: list.filter(
-          el => regexp.test(el.name.toLowerCase()) || regexp.test(el.description.toLowerCase()),
-        ),
-      });
-    }
   }
 
   render() {
-    const {
-      listOfItems, activeFilter, term, fullList,
-    } = this.state;
+    const { listOfItems } = this.state;
     return (
       <div>
         <BannerMessage>&nbsp;</BannerMessage>
